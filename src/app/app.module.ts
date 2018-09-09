@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -8,14 +11,14 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
 import { WallComponent } from './pages/wall/wall.component';
 import { CreateProfileComponent } from './pages/create-profile/create-profile.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { HeaderComponent } from './graph/header/header.component';
-import { ProfileInfoComponent } from './graph/profile-info/profile-info.component';
 import { NavBarComponent } from './forms/nav-bar/nav-bar.component';
-import { FacebookComponent } from './Buttons/facebook/facebook.component';
-import { GoogleComponent } from './Buttons/google/google.component';
-import { ReturnComponent } from './Buttons/return/return.component';
-import { PublishComponent } from './Card/publish/publish.component';
-import { PostComponent } from './Card/post/post.component';
+import { FormCreateAccountComponent } from './forms/form-create-account/form-create-account.component';
+import { FormLoginComponent } from './forms/form-login/form-login.component';
+import { BtnCreateAccountComponent } from './buttons/btn-create-account/btn-create-account.component';
+import { BtnFacebookComponent } from './buttons/btn-facebook/btn-facebook.component';
+import { BtnGoogleComponent } from './buttons/btn-google/btn-google.component';
+import { BtnReturnComponent } from './buttons/btn-return/btn-return.component';
+import { InfoProfileComponent } from './graf/info-profile/info-profile.component';
 
 @NgModule({
   declarations: [
@@ -25,18 +28,20 @@ import { PostComponent } from './Card/post/post.component';
     WallComponent,
     CreateProfileComponent,
     ProfileComponent,
-    HeaderComponent,
-    ProfileInfoComponent,
     NavBarComponent,
-    FacebookComponent,
-    GoogleComponent,
-    ReturnComponent,
-    PublishComponent,
-    PostComponent
+    FormCreateAccountComponent,
+    FormLoginComponent,
+    BtnCreateAccountComponent,
+    BtnFacebookComponent,
+    BtnGoogleComponent,
+    BtnReturnComponent,
+    InfoProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
