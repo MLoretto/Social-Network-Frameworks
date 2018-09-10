@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-create-account',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormCreateAccountComponent implements OnInit {
 
-  constructor() { }
+  @Output() onCreAccount: EventEmitter<any> = new EventEmitter<any>();
+  createaccountForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.createCreateaccountForm();
+  }
 
   ngOnInit() {
+  }
+
+  createCreateaccountForm() {
+    this.createaccountForm = this.formBuilder.group({
+      email: ['',Validators.required, Validators.email],
+      password: ['', Validators.required, Validators.minLength(6)]
+    });
+  }
+
+  addCreAccount() {
+    this.onCreAccount.emit({
+      email: this.createaccountForm.value.email,
+      password: this.createaccountForm.value.password,
+    });
+    this.createaccountForm.reset();
   }
 
 }

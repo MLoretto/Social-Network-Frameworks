@@ -1,5 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
 @font-face {
 	font-family: "CoalhandLukeTRIAL";
 	src: url("fonts/CoalhandLukeTRIAL.ttf");
+}
+
+button:active, button:focus, button:hover {
+	border: none;
+	outline: none;
+}
+
+input:active, input:focus, input:hover {
+	border: none;
+	outline: none;
+}
+
+.form-control:active, .form-control:focus, .form-control:hover {
+	border: 1px solid #ced4da;
+	outline: none;
+	box-shadow: none;
+}
+
+::placeholder {
+	color: #717171;
+	font-family: 'Ubuntu', sans-serif;
 }

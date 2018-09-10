@@ -1,0 +1,16 @@
+.btn-style {
+  background-color: #DD4B39;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 1);
+  width: 12rem;
+  height: 2.5rem;
+  font-size: 18px;
+}
+
+.btn-style:hover {
+  transition: 0.4s;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+i {
+  font-size: 16px;
+}

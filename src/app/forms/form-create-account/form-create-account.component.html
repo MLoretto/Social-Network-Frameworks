@@ -1,3 +1,35 @@
+<form class="form-inline" [formGroup]="createaccountForm" (ngSubmit)="addCreAccount()">
+  <div class="col-12 mb-2">
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Correo Electrónico</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+      <input #email type="text" class="form-control" placeholder="Correo Electrónico" formControlName="email">
+    </div>
+  </div>
+  <div class="col-12 mb-2">
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Contraseña</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+      <input #password type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-12 text-center">
+      <button mat-flat-button color="warn" class="btn-style" type="submit" [disabled]="!createaccountForm.valid">Crear
+        Cuenta</button>
+    </div>
+  </div>
+</form>
+
 <p>
-  form-create-account works!
+  {{createaccountForm.value | json}}
+  {{createaccountForm.status}}
 </p>
