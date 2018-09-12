@@ -21,6 +21,7 @@ import { BtnFacebookComponent } from './buttons/btn-facebook/btn-facebook.compon
 import { BtnGoogleComponent } from './buttons/btn-google/btn-google.component';
 import { BtnReturnComponent } from './buttons/btn-return/btn-return.component';
 import { InfoProfileComponent } from './graf/info-profile/info-profile.component';
+import { HeaderComponent } from './graf/header/header.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { InfoProfileComponent } from './graf/info-profile/info-profile.component
     BtnFacebookComponent,
     BtnGoogleComponent,
     BtnReturnComponent,
-    InfoProfileComponent
+    InfoProfileComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

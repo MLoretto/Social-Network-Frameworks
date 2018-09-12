@@ -20,8 +20,8 @@ export class FormCreateAccountComponent implements OnInit {
 
   createCreateaccountForm() {
     this.createaccountForm = this.formBuilder.group({
-      email: ['',Validators.required, Validators.email],
-      password: ['', Validators.required, Validators.minLength(6)]
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
   }
 

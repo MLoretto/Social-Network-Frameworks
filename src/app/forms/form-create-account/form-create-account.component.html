@@ -22,14 +22,9 @@
     </div>
   </div>
   <div class="container">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center pt-5">
       <button mat-flat-button color="warn" class="btn-style" type="submit" [disabled]="!createaccountForm.valid">Crear
         Cuenta</button>
     </div>
   </div>
 </form>
-
-<p>
-  {{createaccountForm.value | json}}
-  {{createaccountForm.status}}
-</p>

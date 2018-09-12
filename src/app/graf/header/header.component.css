@@ -1,0 +1,39 @@
+.titleSize {
+  font-family: "CoalhandLukeTRIAL";
+  color: #ffffff;
+}
+
+.titleSizeCuenta {
+  color: #ffffff;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media (min-width: 1025px) {
+  .titleSize {
+    font-size: 90px;
+  }
+  .titleSizeCuenta {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .titleSize {
+    font-size: 60px;
+  }
+  .titleSizeCuenta {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .titleSize {
+    font-size: 40px;
+  }
+  .titleSizeCuenta {
+    font-size: 20px;
+  }
+}
