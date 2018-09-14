@@ -1,3 +1,24 @@
-<p>
-  nav-bar works!
-</p>
+<div class="vertical-menu m-0 p-0">
+  <div class="menuTitle">
+    <span>Menú</span>
+  </div>
+    <nav class="nav flex-column optionsMenu">
+      <div class="contentPosit">
+        <a routerLink="/muro" routerLinkActive="active"  class="positBackground"><i class="fas fa-home pr-3 py-3"></i>Home</a>
+      </div>
+      <div class="contentPosit">
+        <a routerLink="/perfil" routerLinkActive="active" class="positBackground">
+          <i class="fas fa-user pr-3 py-3"></i>Perfil</a>
+      </div>  
+      <div class="contentPosit">
+        <a routerLink="/perfileditar" routerLinkActive="active" class="positBackground">
+          <i class="fas fa-pencil-alt pr-3 py-3"></i>Editar Perfil</a>
+      </div>
+      <div class="contentPosit">
+        <a routerLink="/" routerLinkActive="active" class="positBackground">
+          <i class="fas fa-sign-out-alt pr-3 py-3"></i>Cerrar Sesión</a>
+      </div>
+    </nav>
+</div>
+
+

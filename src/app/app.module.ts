@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 // material.angular
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './auth.service';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
@@ -27,6 +29,9 @@ import { BtnFacebookComponent } from './buttons/btn-facebook/btn-facebook.compon
 import { BtnGoogleComponent } from './buttons/btn-google/btn-google.component';
 import { BtnReturnComponent } from './buttons/btn-return/btn-return.component';
 import { InfoProfileComponent } from './graf/info-profile/info-profile.component';
+import { FormEditProfileComponent } from './forms/form-edit-profile/form-edit-profile.component';
+import { BackgroundWallComponent } from './graf/background-wall/background-wall.component';
+import { PostComponent } from './card/post/post.component';
 import { HeaderComponent } from './graf/header/header.component';
 
 @NgModule({
@@ -45,6 +50,9 @@ import { HeaderComponent } from './graf/header/header.component';
     BtnGoogleComponent,
     BtnReturnComponent,
     InfoProfileComponent,
+    FormEditProfileComponent,
+    PostComponent,
+    BackgroundWallComponent,
     HeaderComponent
   ],
   imports: [
