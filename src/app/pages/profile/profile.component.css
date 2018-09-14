@@ -34,3 +34,8 @@
     font-size: 15px;
   }
 }
+
+.mobileScroll{
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+}

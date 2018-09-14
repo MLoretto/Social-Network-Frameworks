@@ -1,0 +1,23 @@
+.imgApple {
+	width: 24px;
+	height: 24px;
+}
+
+.btnApple {
+	background: transparent;
+	border: none;
+	margin-top: 12px;
+	outline: none !important;
+}
+
+.btnApple:hover {
+	background: transparent;
+	border: none;
+	margin-top: 12px;
+}
+
+.appleLike {
+	float: right;
+	margin-top: 20px;
+	color: #ffffff;
+}

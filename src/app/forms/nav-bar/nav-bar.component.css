@@ -1,0 +1,60 @@
+.vertical-menu {
+  max-width: 100%;
+  background: url("../../../img/corchoMenu.jpg") no-repeat center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: calc(100vh - 0px);
+  align-content: center;
+}
+.optionsMenu{
+  padding-top: 25px;
+  align-items: center;
+}
+.menuTitle{
+  text-align: center;
+  color: rgb(49, 32, 24);
+  font-size: 50px;
+  padding-top: 30px;
+  font-weight: 600;
+}
+.contentPosit{
+  margin-top: 15px;
+}
+.vertical-menu a {
+  background: transparent;
+  color:  rgb(49, 32, 24);
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  display: block;
+  padding: 12px; 
+  text-decoration: none; 
+  padding-left: 40px;
+}
+
+.vertical-menu a:hover {
+  color:rgb(3, 182, 3);
+}
+
+.vertical-menu a.active {
+  color: #482E22;
+	font-size: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.positBackground{
+  background-image: url('../../../img/posit1.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  padding-top: 20px !important;
+  display: block;
+  width: 290px;
+  height: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  white-space:nowrap;
+  padding-left: 60px !important;
+}
