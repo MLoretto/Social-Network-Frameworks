@@ -1,3 +1,10 @@
 .btn-style {
-  font-size: 18px;
+  text-shadow: 3px 4px 3px #8888888c;
+  color: #B0C6B7;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-style:hover, .btn-style:active, .btn-style:focus {
+  background-color: none;
 }

@@ -26,6 +26,7 @@ import { InfoProfileComponent } from './graf/info-profile/info-profile.component
 import { FormEditProfileComponent } from './forms/form-edit-profile/form-edit-profile.component';
 import { BackgroundWallComponent } from './graf/background-wall/background-wall.component';
 import { PostComponent } from './card/post/post.component';
+import { HeaderComponent } from './graf/header/header.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PostComponent } from './card/post/post.component';
     InfoProfileComponent,
     FormEditProfileComponent,
     PostComponent,
-    BackgroundWallComponent
+    BackgroundWallComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,36 +1,6 @@
 .containerLogin {
-  background: url("../../../img/fondo1-1.jpg")no-repeat;
+  background: url("../../../img/fondo1-1.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
-  border: 20px groove #9C644B;
-}
-
-.titleSize {
-  font-size: 60px;
-  font-family: "CoalhandLukeTRIAL";
-  color: #ffffff;
-}
-
-.titleSizeCuenta {
-  color: #ffffff;
-  font-size: 30px;
-}
-
-@media (min-width: 1025px) {
-  .titleSize {
-    font-size: 90px;
-  }
-  .titleSizeCuenta {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 425px) {
-  .titleSize {
-    font-size: 30px;
-  }
-  .titleSizeCuenta {
-    font-size: 15px;
-  }
 }
