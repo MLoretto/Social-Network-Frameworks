@@ -24,7 +24,6 @@ import { BtnGoogleComponent } from './buttons/btn-google/btn-google.component';
 import { BtnReturnComponent } from './buttons/btn-return/btn-return.component';
 import { InfoProfileComponent } from './graf/info-profile/info-profile.component';
 import { FormEditProfileComponent } from './forms/form-edit-profile/form-edit-profile.component';
-import { BackgroundWallComponent } from './graf/background-wall/background-wall.component';
 import { PostComponent } from './card/post/post.component';
 import { HeaderComponent } from './graf/header/header.component';
 
@@ -46,7 +45,6 @@ import { HeaderComponent } from './graf/header/header.component';
     InfoProfileComponent,
     FormEditProfileComponent,
     PostComponent,
-    BackgroundWallComponent,
     HeaderComponent
   ],
   imports: [
