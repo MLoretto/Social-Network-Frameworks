@@ -8,7 +8,7 @@
 
   <div class="row justify-content-center pt-5 p-0 m-0">
     <div class="col-12 col-md-8 col-lg-5">
-      <app-form-login></app-form-login>
+      <app-form-login (onLogin)="onNewLogin($event)"></app-form-login>
     </div>
 
   </div>
@@ -19,7 +19,7 @@
     <div class="col-12 pt-2 text-center">
       <app-btn-google></app-btn-google>
     </div>
-    <div class="col-12 pt-4 text-center">
+    <div class="col-12 pt-4 pb-5 text-center">
       <app-btn-create-account></app-btn-create-account>
     </div>
   </div>

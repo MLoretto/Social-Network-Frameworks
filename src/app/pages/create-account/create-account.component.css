@@ -1,12 +1,19 @@
 .containerLogin {
-  background: url("../../../img/fondo1-1.jpg");
+  max-width: 100%;
+  background: url("../../../img/fondoGral.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
-  height: 100vh;
+  height: calc(100vh - 0px);
+  margin: 0;
+  border: 15px groove #9C644B;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.4) 10px 10px inset;
 }
 
 .titleSizeCuenta {
-  color: #B0C6B7;
+  color: #fff;
   font-family: 'Ubuntu', sans-serif;
 }
 

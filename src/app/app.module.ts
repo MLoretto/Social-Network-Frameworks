@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
+// servicio firebase
+import { ProfilesService } from './services/profiles.service';
 
 // material.angular
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,9 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // Firebase
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -62,9 +67,11 @@ import { HeaderComponent } from './graf/header/header.component';
     MatButtonModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, ProfilesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
