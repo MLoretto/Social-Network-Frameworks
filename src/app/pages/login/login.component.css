@@ -4,3 +4,26 @@
   background-position: center;
   height: 100vh;
 }
+
+.titleSizeCuenta {
+  color: #B0C6B7;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media (min-width: 1025px) {
+  .titleSizeCuenta {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .titleSizeCuenta {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .titleSizeCuenta {
+    font-size: 20px;
+  }
+}
