@@ -12,6 +12,11 @@
   box-shadow: rgba(0, 0, 0, 0.4) 10px 10px inset;
 }
 
+.mobileScroll{
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+}
+
 .titleSizeCuenta {
   color: #fff;
   font-family: 'Ubuntu', sans-serif;
