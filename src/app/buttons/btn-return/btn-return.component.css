@@ -1,8 +1,7 @@
 .btn-style {
-  background-color: #DD4B39;
-  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 1);
-  width: 12rem;
-  height: 2.5rem;
+  text-shadow: 3px 4px 3px #8888888c;
+  color: rgb(220, 223, 66);
+  font-size: 20px;
   font-family: 'Ubuntu', sans-serif;
 }
 

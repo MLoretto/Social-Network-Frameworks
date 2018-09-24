@@ -17,6 +17,11 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+.mobileScroll{
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+}
+
 @media (min-width: 1025px) {
   .titleSizeCuenta {
     font-size: 40px;
