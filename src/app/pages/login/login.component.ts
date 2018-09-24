@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit {
         if (error.code === "auth/user-not-found") {
           alert("Usuario o Contraseña Incorrecta")
         }
-        if (error.code === "auth/wrong-password") {
+        else if (error.code === "auth/wrong-password") {
           alert("Usuario o Contraseña Incorrecta")
         }
-        else{
+        else {
           alert("Error desconocido")
         }
       }
