@@ -38,6 +38,7 @@ import { FormEditProfileComponent } from './forms/form-edit-profile/form-edit-pr
 import { PostComponent } from './card/post/post.component';
 import { HeaderComponent } from './graf/header/header.component';
 import { PerfilComponent } from './forms/perfil/perfil.component';
+import { FormMuroComponent } from './forms/form-muro/form-muro.component';
 import { PublishComponent } from './card/publish/publish.component'
 
 @NgModule({
@@ -60,6 +61,7 @@ import { PublishComponent } from './card/publish/publish.component'
     PostComponent,
     HeaderComponent,
     PerfilComponent,
+    FormMuroComponent,
     PublishComponent
   ],
   imports: [
