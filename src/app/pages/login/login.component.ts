@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { AuthService } from '../../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginFirebase: AuthService) { }
+  constructor(private loginFirebase: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
     this.loginFirebase.login(data.email, data.password).then(
       info => {
-        // routing al muro
+        this.router.navigate(['/muro']);
         console.log(JSON.stringify(info.user, null, 4));
       }
     ).catch(

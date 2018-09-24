@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfilesService } from '../../services/profiles.service';
 import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account',
@@ -9,7 +10,7 @@ import { AuthService } from '../../auth.service';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor(private addProfileFirestore: ProfilesService, private signupFirebase: AuthService) { }
+  constructor(private addProfileFirestore: ProfilesService, private signupFirebase: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -19,7 +20,7 @@ export class CreateAccountComponent implements OnInit {
       info => {
         this.addProfileFirestore.addProfileData(info.user.email, info.user.uid).then(
           infoFS => {
-            // routing al muro
+            this.router.navigate(['/muro']);
           }
         ).catch(
           error => {
@@ -30,7 +31,7 @@ export class CreateAccountComponent implements OnInit {
       }
     ).catch(
       error => {
-        // mandar a crear cuenta 
+        this.router.navigate(['/crearcuenta'])
         console.log(error);
       }
     )
