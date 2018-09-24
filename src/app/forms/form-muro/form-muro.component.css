@@ -1,0 +1,53 @@
+.container{
+    max-width: 100%;
+    background: url("../../../img/fondoGral.jpg") no-repeat center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: calc(100vh - 0px);
+    margin: 0;
+    border: 15px groove #9C644B;
+    height: auto;
+    box-shadow:rgba(0,0,0,0.4) 10px 10px inset;
+}
+
+.public{
+    padding-top: 30px;
+}
+
+.image{
+    z-index: 100;
+    padding: 20px;
+}
+
+.titleWall {
+	font-family: "CoalhandLukeTRIAL";
+	color: #ffffff;
+	font-size: 80px;
+    margin-top:60px;
+}
+.titlePerfil {
+    font-size: 30px;
+}
+
+.datePerfil{
+    padding-top: 10px;
+    font-size: 25px;
+    color: yellow;
+}
+
+.infoPerfil{
+    font-size: 30px;
+    font-family: "CoalhandLukeTRIAL";
+    padding-top: 10px;
+}
+
+.row{
+    justify-content: center;
+}
+
+.mobileScroll{
+    height: calc(100vh - 0px);
+    overflow-y: auto;
+}
