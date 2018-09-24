@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class FormCreateAccountComponent implements OnInit {
 
-  @Output() onCreAccount: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onCreateAccount: EventEmitter<any> = new EventEmitter<any>();
   createaccountForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
@@ -26,7 +26,7 @@ export class FormCreateAccountComponent implements OnInit {
   }
 
   addCreAccount() {
-    this.onCreAccount.emit({
+    this.onCreateAccount.emit({
       email: this.createaccountForm.value.email,
       password: this.createaccountForm.value.password,
     });

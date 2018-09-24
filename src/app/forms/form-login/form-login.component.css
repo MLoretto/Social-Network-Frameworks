@@ -4,6 +4,7 @@
   width: 12rem;
   height: 2.5rem;
   font-family: 'Ubuntu', sans-serif;
+  color: white;
 }
 
 .btn-style:hover {
@@ -12,7 +13,8 @@
 }
 
 .mat-flat-button.mat-warn[disabled], .mat-flat-button[disabled][disabled] {
-  color: white;
+  color: #00000080;
+  background-color: #d3504a8c;
 }
 
 @media (min-width: 1025px) {

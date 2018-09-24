@@ -39,6 +39,7 @@ import { PostComponent } from './card/post/post.component';
 import { HeaderComponent } from './graf/header/header.component';
 import { PerfilComponent } from './forms/perfil/perfil.component';
 import { FormMuroComponent } from './forms/form-muro/form-muro.component';
+import { PublishComponent } from './card/publish/publish.component'
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { FormMuroComponent } from './forms/form-muro/form-muro.component';
     PostComponent,
     HeaderComponent,
     PerfilComponent,
-    FormMuroComponent
+    FormMuroComponent,
+    PublishComponent
   ],
   imports: [
     BrowserModule,

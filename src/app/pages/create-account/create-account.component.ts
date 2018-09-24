@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfilesService } from '../../services/profiles.service';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-create-account',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private addProfileFirestore: ProfilesService, private signupFirebase: AuthService) { }
 
   ngOnInit() {
   }
 
+  onNewCreateAccount(data): void {
+    this.signupFirebase.signup(data.email, data.password).then(
+      info => {
+        this.addProfileFirestore.addProfileData(info.user.email, info.user.uid).then(
+          infoFS => {
+            // routing al muro
+          }
+        ).catch(
+          error => {
+            console.log("No se creo el perfil correctamente", error);
+          }
+        )
+        console.log(info.user.uid, info.user.email);
+      }
+    ).catch(
+      error => {
+        // mandar a crear cuenta 
+        console.log(error);
+      }
+    )
+  }
 }

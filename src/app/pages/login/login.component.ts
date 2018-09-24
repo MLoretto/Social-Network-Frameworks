@@ -17,13 +17,20 @@ export class LoginComponent implements OnInit {
 
     this.loginFirebase.login(data.email, data.password).then(
       info => {
-        alert(JSON.stringify(info.user, null, 4));
+        // routing al muro
         console.log(JSON.stringify(info.user, null, 4));
       }
     ).catch(
       error => {
-        alert(JSON.stringify(error, null, 4));
-        console.log(JSON.stringify(error, null, 4));
+        if (error.code === "auth/user-not-found") {
+          alert("Usuario o Contraseña Incorrecta")
+        }
+        else if (error.code === "auth/wrong-password") {
+          alert("Usuario o Contraseña Incorrecta")
+        }
+        else {
+          alert("Error desconocido")
+        }
       }
     )
 
