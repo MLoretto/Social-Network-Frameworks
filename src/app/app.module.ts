@@ -38,6 +38,7 @@ import { FormEditProfileComponent } from './forms/form-edit-profile/form-edit-pr
 import { PostComponent } from './card/post/post.component';
 import { HeaderComponent } from './graf/header/header.component';
 import { PerfilComponent } from './forms/perfil/perfil.component';
+import { PublishComponent } from './card/publish/publish.component'
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PerfilComponent } from './forms/perfil/perfil.component';
     FormEditProfileComponent,
     PostComponent,
     HeaderComponent,
-    PerfilComponent
+    PerfilComponent,
+    PublishComponent
   ],
   imports: [
     BrowserModule,
