@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { WallComponent } from '../../pages/wall/wall.component';
 
 @Component({
   selector: 'app-post',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  @Input() dataUser: string[];
+
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

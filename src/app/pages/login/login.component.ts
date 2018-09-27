@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
     this.loginFirebase.login(data.email, data.password).then(
       info => {
         this.router.navigate(['/muro']);
-        console.log(JSON.stringify(info.user, null, 4));
       }
     ).catch(
       error => {
@@ -34,7 +33,6 @@ export class LoginComponent implements OnInit {
         }
       }
     )
-
   }
 
 }

@@ -40,5 +40,9 @@ export class ProfilesService {
     return this.ProfileDataCollection.add(data);
   }
 
+  getProfileData() {
+    return this.ProfileData;
+  }
+
 }
 

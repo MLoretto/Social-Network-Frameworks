@@ -20,9 +20,12 @@ export class FormEditProfileComponent implements OnInit {
 
   createCreateEditProfileForm() {
     this.createEditProfileForm = this.formBuilder.group({
-      email: ['',Validators.required, Validators.email],
-      //password: ['', Validators.required, Validators.minLength(6)],
-      nombre:['',Validators.required]
+      age:['',Validators.required],
+      areasOfInterest:['',Validators.required],
+      level:['',Validators.required],
+      name:['',Validators.required],
+      photo:['',Validators.required],
+      review:['',Validators.required]
     });
   }
 
