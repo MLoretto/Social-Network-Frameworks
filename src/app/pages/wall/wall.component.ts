@@ -10,8 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class WallComponent implements OnInit {
 
-
-
   infoUser: any;
   dataProfile: any;
   dataUser: any;
@@ -19,28 +17,19 @@ export class WallComponent implements OnInit {
   profileList: Observable<any[]>;
 
   constructor(private getDataUser: AuthService, private getProfile: ProfilesService) {
-
-
-
-  }
-
-
-  ngOnInit() {
-
     this.getDataUser.getInfoUser().subscribe(info => {
       this.infoUser = info;
     });
 
     this.profileList = this.getProfile.getProfileData();
-
-
     this.getProfile.getProfileData().subscribe(profiles => {
       this.dataProfile = profiles;
-      const info = this.infoUser;
-      this.dataUser =  profiles.filter(profile => profile.uid === info.uid)[0];
+      this.dataUser =  profiles.filter(profile => profile.uid === this.infoUser.uid)[0];
+    });
+  }
 
-      console.log(this.dataUser);
 
-    })
+  ngOnInit() {
+    this.profileList = this.getProfile.getProfileData();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WallComponent } from '../../pages/wall/wall.component';
+import { ProfilesService } from '../../services/profiles.service';
 
 @Component({
   selector: 'app-post',
@@ -9,14 +10,27 @@ import { WallComponent } from '../../pages/wall/wall.component';
 export class PostComponent implements OnInit {
 
   @Input() dataUser: any;
-
-  constructor() {
+  @Input() infoUser: any;
+  
+  valid:boolean;
+  constructor(private getProfile: ProfilesService) {
 
   }
 
   ngOnInit() {
-    console.log("data..", this.dataUser);
-
+    if(this.infoUser.uid ===this.dataUser.uid){
+      this.valid = true;
+    }else{
+      this.valid = false;
+    }
+  }
+  deletePost(){
+    if(this.dataUser.Id !== null)
+      this.getProfile.deleteProfile(this.dataUser.Id);
   }
 
+  updateLike(){
+    if(this.dataUser.Id !== null)
+      this.getProfile.likeUpdateProfile(this.dataUser.Id, this.dataUser.level );
+  }
 }

@@ -1,9 +1,9 @@
 <div class="container-fluid m-0 p-0">
     <div class="row m-0 no-gutters">
-        <div class="col-lg-3 col-md-3 col-sm-3 m-0">
+        <div class="col-lg-3 m-0">
             <app-nav-bar></app-nav-bar>
         </div>
-        <div class="col-lg-9 col-md-9 col-sm-9 m-0 p-0 container mobileScroll">
+        <div class="col-lg-9 m-0 p-0 container mobileScroll">
             <div class="row">
                 <div class="col-md-10 containerWall">
                     <h1 class="titleWall text-center">Logremos el 7</h1>
@@ -13,7 +13,7 @@
                             <div class="col-md-12">
                                 <app-form-muro></app-form-muro>
                                 <div class="container-fluid" *ngFor="let profileItem of profileList | async">
-                                    <app-post *ngIf='profileItem' [dataUser]="profileItem"></app-post>
+                                    <app-post *ngIf='profileItem' [dataUser]="profileItem" [infoUser]="infoUser"></app-post>
                                 </div>                                 
                             </div>
                         </div>
@@ -23,23 +23,3 @@
         </div>  
     </div>
 </div>
-
-
-
-
-<!--
-<h1>********************</h1>
-
-<div class="container-fluid m-0 p-0">
-    <div class="row m-0 no-gutters">
-        <div class="col-lg-3 m-0">
-            <app-nav-bar></app-nav-bar>
-        </div>
-        <div class="col-lg-9 m-0 p-0 mobileScroll">
-            < ! -- ng if para resolver problema de escritura asincrona - - >
-            <app-post *ngIf='dataUser' [dataUser]="dataUser"></app-post>
-            <app-form-muro></app-form-muro>
-        </div>
-    </div>
-</div>
--->

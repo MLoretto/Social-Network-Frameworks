@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -14,7 +13,8 @@ export interface ProfileData {
   photo: string; 
   review: string; 
   areasOfInterest: string[]; 
-  level: string
+  level: string,
+  Id: string
 }
 
 @Injectable({
@@ -26,7 +26,7 @@ export class ProfilesService {
   private ProfileDataCollection: AngularFirestoreCollection<ProfileData>
   ProfileData: Observable<ProfileData[]>;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(public afs: AngularFirestore) {
     this.ProfileDataCollection = afs.collection<ProfileData>('ProfileData');
     this.ProfileData = this.ProfileDataCollection.valueChanges();
   }
@@ -42,14 +42,14 @@ export class ProfilesService {
       photo: null,
       review: null,
       areasOfInterest: null,
-      level: null
+      level: null,
+      Id:null
     }
     return this.ProfileDataCollection.add(data);
   }
 
   addProfile(email: string, uid: string, name: string, review:string  ) {
     const id = this.afs.createId();
-
     const data: ProfileData = {
       email: email,
       date: new Date().toISOString(),
@@ -59,16 +59,34 @@ export class ProfilesService {
       photo: '../../../img/Avatar-facebook.png',
       review: review,
       areasOfInterest: null,
-      level: "0"
-    }
-    return this.ProfileDataCollection.add(data);
+      level: "0",
+      Id : id
+    };
+    
+    this.afs.collection("ProfileData").doc(id).set(data);
   }
 
-
-
   getProfileData() {
+    this.ProfileDataCollection = this.afs.collection<ProfileData>('ProfileData');
+    this.ProfileData = this.ProfileDataCollection.valueChanges();
     return this.ProfileData;
   }
 
+  deleteProfile(id:string){
+    this.afs.collection('ProfileData').doc(id).delete();
+  }
+
+  likeUpdateProfile(id:string, likes:number){
+    likes++;
+    this.afs.collection('ProfileData').doc(id).update({
+      level :likes
+    });
+  }
+
+  UpdateProfile(id:string, review:string){ // Modificar post
+    this.afs.collection('ProfileData').doc(id).update({
+      review :review
+    });
+  }
 }
 
