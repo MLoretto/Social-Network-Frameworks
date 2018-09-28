@@ -10,34 +10,29 @@ import { ProfilesService } from '../../services/profiles.service';
 })
 export class WallComponent implements OnInit {
 
+
   infoUser: any;
   dataProfile: any;
+  dataUser: any;
 
   constructor(private getDataUser: AuthService, private getProfile: ProfilesService) {
 
   }
 
+
   ngOnInit() {
-  }
 
-
-  getInfoUser() {
     this.getDataUser.getInfoUser().subscribe(info => {
       this.infoUser = info;
     });
+
     this.getProfile.getProfileData().subscribe(profiles => {
       this.dataProfile = profiles;
       const info = this.infoUser;
+      this.dataUser = profiles.filter(profile => profile.uid === info.uid)[0];
 
-      const dataUser = [];
-      profiles.forEach(uid => {
-        if (uid.uid === info.uid) {
-          const data = [info.email, uid.name, info.uid]
-          dataUser.push(data);
-        }
-      })
+      console.log(this.dataUser);
 
     })
   }
-
 }

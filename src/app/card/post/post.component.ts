@@ -8,13 +8,15 @@ import { WallComponent } from '../../pages/wall/wall.component';
 })
 export class PostComponent implements OnInit {
 
-  @Input() dataUser: string[];
+  @Input() dataUser: any;
 
   constructor() {
 
   }
 
   ngOnInit() {
+    console.log("data..", this.dataUser);
+
   }
 
 }

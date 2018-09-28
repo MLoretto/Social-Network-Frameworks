@@ -4,6 +4,8 @@
             <app-nav-bar></app-nav-bar>
         </div>
         <div class="col-lg-9 m-0 p-0 mobileScroll">
+            <!-- ng if para resolver problema de escritura asincrona -->
+            <app-post *ngIf='dataUser' [dataUser]="dataUser"></app-post>
             <app-form-muro></app-form-muro>
         </div>
     </div>
