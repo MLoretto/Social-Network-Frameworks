@@ -1,3 +1,23 @@
+
+.imgAvatar {
+	border-radius: 100px;
+	width: 70px !important;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+
+.nameUser {
+	margin-top: 45px;
+	font-size: 25px;
+	color: #ffffff;
+}
+
+.datePost {
+	margin-top: -12px;
+	color: #ffffff;
+	font-size: 18px;
+}
+
 .imgApple {
 	width: 24px;
 	height: 24px;
@@ -9,6 +29,7 @@
 	margin-top: 12px;
 	outline: none !important;
 }
+
 
 .btnApple:hover {
 	background: transparent;

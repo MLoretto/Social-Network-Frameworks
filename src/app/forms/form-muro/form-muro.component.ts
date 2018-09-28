@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormMuroComponent implements OnInit {
 
+
+  
   constructor() { }
 
   ngOnInit() {
   }
+  logoutAuth() {
+    alert('Agregar!!!');
+
+  }
+
 
 }

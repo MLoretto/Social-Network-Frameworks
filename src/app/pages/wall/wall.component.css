@@ -2,3 +2,164 @@
     height: calc(100vh - 0px);
     overflow-y: auto;
 }
+
+
+/* Profile*/
+/*
+.container{
+    max-width: 100%;
+    background: url("../../../img/fondoGral.jpg") no-repeat center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: calc(100vh - 0px);
+    margin: 0;
+    border: 15px groove #9C644B;
+    height: auto;
+    box-shadow:rgba(0,0,0,0.4) 10px 10px inset;
+}
+
+.public{
+    padding-top: 30px;
+}
+
+.image{
+    z-index: 100;
+    padding: 20px;
+}
+
+.titleWall {
+	font-family: "CoalhandLukeTRIAL";
+	color: #ffffff;
+	font-size: 80px;
+    margin-top:60px;
+}
+.titlePerfil {
+    font-size: 30px;
+}
+
+.datePerfil{
+    padding-top: 10px;
+    font-size: 25px;
+    color: yellow;
+}
+
+.infoPerfil{
+    font-size: 30px;
+    font-family: "CoalhandLukeTRIAL";
+    padding-top: 10px;
+}
+
+.row{
+    justify-content: center;
+}
+
+.mobileScroll{
+    height: calc(100vh - 0px);
+    overflow-y: auto;
+}
+*/
+
+body{
+    background-color: black;
+}
+
+.imgAvatar {
+	border-radius: 100px;
+	width: 70px !important;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+
+.nameUser {
+	margin-top: 45px;
+	font-size: 25px;
+	color: #ffffff;
+}
+
+.datePost {
+	margin-top: -12px;
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.imgApple {
+	width: 24px;
+	height: 24px;
+}
+
+.btnApple {
+	background: transparent;
+	border: none;
+	margin-top: 12px;
+	outline: none !important;
+}
+
+
+.btnApple:hover {
+	background: transparent;
+	border: none;
+	margin-top: 12px;
+}
+
+.appleLike {
+	float: right;
+	margin-top: 20px;
+	color: #ffffff;
+}
+
+/* --- muro --- */
+.container{
+    max-width: 100%;
+    background: url("../../../img/fondoGral.jpg") no-repeat center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: calc(100vh - 0px);
+    margin: 0;
+    border: 15px groove #9C644B;
+    height: auto;
+    box-shadow:rgba(0,0,0,0.4) 10px 10px inset;
+}
+
+.public{
+    padding-top: 30px;
+}
+
+.image{
+    z-index: 100;
+    padding: 20px;
+}
+
+.titleWall {
+	font-family: "CoalhandLukeTRIAL";
+	color: #ffffff;
+	font-size: 80px;
+    margin-top:60px;
+}
+.titlePerfil {
+    font-size: 30px;
+}
+
+.datePerfil{
+    padding-top: 10px;
+    font-size: 25px;
+    color: yellow;
+}
+
+.infoPerfil{
+    font-size: 30px;
+    font-family: "CoalhandLukeTRIAL";
+    padding-top: 10px;
+}
+
+.row{
+    justify-content: center;
+}
+
+.mobileScroll{
+    height: calc(100vh - 0px);
+    overflow-y: auto;
+}

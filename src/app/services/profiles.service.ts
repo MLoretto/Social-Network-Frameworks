@@ -6,8 +6,15 @@ import { map } from 'rxjs/operators';
 import { Action } from 'rxjs/internal/scheduler/Action';
 
 export interface ProfileData {
-  email: string; date: Date; uid: string; name: string;
-  age: number; photo: string; review: string; areasOfInterest: string[]; level: string[]
+  email: string;
+  date: Date;
+  uid: string;
+  name: string;
+  age: number;
+  photo: string; 
+  review: string; 
+  areasOfInterest: string[]; 
+  level: string[]
 }
 
 @Injectable({
