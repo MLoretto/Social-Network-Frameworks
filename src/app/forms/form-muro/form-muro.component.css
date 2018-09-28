@@ -9,9 +9,12 @@
     margin: 0;
     border: 15px groove #9C644B;
     height: auto;
-    box-shadow:rgba(0,0,0,0.4) 10px 10px inset;
+    box-shadow:rgba(34, 34, 34, 0.4) 10px 10px inset;
 }
 
+.able{
+    box-shadow: rgba(0,0,0,0.5) 0px 3px 3px 0px;
+}
 .public{
     padding-top: 30px;
 }

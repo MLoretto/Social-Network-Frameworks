@@ -1,11 +1,14 @@
-
 .imgAvatar {
 	border-radius: 100px;
-	width: 70px !important;
-	margin-top: 35px;
+	width: 90px !important;
+	margin-top: 50px;
 	margin-bottom: 10px;
+	box-shadow: rgba(34,34,34,0.4) 0px 3px 3px 0px;
 }
 
+.able{
+	box-shadow: rgba(34,34,34,0.4) 0px 3px 3px 0px;
+}
 .nameUser {
 	margin-top: 45px;
 	font-size: 25px;
@@ -13,7 +16,7 @@
 }
 
 .datePost {
-	margin-top: -12px;
+	margin-top: -15px;
 	color: #ffffff;
 	font-size: 18px;
 }

@@ -1,17 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid p-0">
   <div class="row">
     <div class="col-12">
       <div class="float-left">
-        <img src="{{dataUser.photo}}" alt="avatar" class="img-fluid imgAvatar ">
+        <img src="{{dataUser.photo}}" alt="avatar" class="img-fluid imgAvatar">
       </div>
       <div class="float-left ml-3">
-        <p class="nameUser">{{dataUser.name}} {{dataUser.email}}</p>
-        <p class="datePost">{{dataUser.date}}</p>
+        <p class="nameUser">{{dataUser.name}} </p>
+        <p class="datePost">{{dataUser.email}}</p>
+        <p class="datePost">{{dataUser.date| date:'medium'}}</p>
       </div>
     </div>
   </div>
-    <div class="row">
-      <div class="col-12">
+    <div class="row p-0">
+      <div class="col-12 p-0">
         <textarea disabled class="form-control able" rows="3">{{dataUser.review}}</textarea>
       </div>
     </div>

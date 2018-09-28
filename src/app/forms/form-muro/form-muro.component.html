@@ -1,12 +1,14 @@
+<form [formGroup]="reviewForm" >
+    <div class="row">
+        <div class="col-12">
+            <textarea #review class="form-control able" rows="3" formControlName="review"></textarea>
+        </div>
+    </div>
+</form> 
 <div class="row">
-  <div class="col-12">
-    <textarea class="form-control able" rows="3"></textarea>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 mb-3">
-    <button type="button" class="btn btn-primary float-right mt-3" 
-            data-toggle="modal" placeholder= "Ingrese su comentario" 
-            data-target="#exampleModal" (click)="logoutAuth()">Publicar</button>
-  </div>
-</div>
+    <div class="col-12 mb-3">
+        <button type="button" class="btn btn-primary float-right mt-3" 
+                data-toggle="modal" placeholder= "Ingrese su comentario" 
+                data-target="#exampleModal" (click)="addReview()">Publicar</button>
+    </div>
+ </div>

@@ -7,14 +7,14 @@ import { Action } from 'rxjs/internal/scheduler/Action';
 
 export interface ProfileData {
   email: string;
-  date: Date;
+  date: string;
   uid: string;
   name: string;
   age: number;
   photo: string; 
   review: string; 
   areasOfInterest: string[]; 
-  level: string[]
+  level: string
 }
 
 @Injectable({
@@ -35,7 +35,7 @@ export class ProfilesService {
   addProfileData(email: string, uid: string) {
     const data: ProfileData = {
       email: email,
-      date: new Date(),
+      date: new Date().toISOString(),
       uid: uid,
       name: null,
       age: null,
@@ -46,6 +46,25 @@ export class ProfilesService {
     }
     return this.ProfileDataCollection.add(data);
   }
+
+  addProfile(email: string, uid: string, name: string, review:string  ) {
+    const id = this.afs.createId();
+
+    const data: ProfileData = {
+      email: email,
+      date: new Date().toISOString(),
+      uid: uid,
+      name: name,
+      age: null,
+      photo: '../../../img/Avatar-facebook.png',
+      review: review,
+      areasOfInterest: null,
+      level: "0"
+    }
+    return this.ProfileDataCollection.add(data);
+  }
+
+
 
   getProfileData() {
     return this.ProfileData;
